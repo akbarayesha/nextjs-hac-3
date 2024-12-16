@@ -7,13 +7,20 @@ export default function Cart() {
     <>
       {/* Hero Section */}
       <div className="relative">
-        <Image src={ShopeHero} alt="Cart Hero" />
-        <div className="absolute top-[50%] left-[50%] flex flex-col items-center justify-center translate-x-[-50%] translate-y-[-50%]">
-          <h3 className="font-bold text-[1.5rem]">Cart</h3>
+        <Image
+          src={ShopeHero}
+          alt="Cart Hero"
+          layout="responsive"
+          width={1920}
+          height={600} // Adjust these values according to your hero image dimensions
+          className="object-cover"
+        />
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center justify-center text-white">
+          <h3 className="font-bold text-[1.5rem] md:text-2xl">Cart</h3>
           <div className="flex items-center">
-            <h3>Home</h3>
-            <IoIosArrowForward />
-            <h3>Cart</h3>
+            <h3 className="text-white">Home</h3>
+            <IoIosArrowForward className="text-white mx-1" />
+            <h3 className="text-white">Cart</h3>
           </div>
         </div>
       </div>
@@ -21,11 +28,11 @@ export default function Cart() {
       {/* Product Details */}
       <div className="container mx-auto p-4">
         {/* Header Row */}
-        <div className="producDetails hidden md:flex justify-around items-center p-4 w-full bg-[#F9F1E7]">
-          <h2>Product</h2>
-          <h2>Price</h2>
-          <h2>Quantity</h2>
-          <h2>Subtotal</h2>
+        <div className="hidden md:flex justify-around items-center p-4 w-full bg-[#F9F1E7]">
+          <h2 className="font-semibold">Product</h2>
+          <h2 className="font-semibold">Price</h2>
+          <h2 className="font-semibold">Quantity</h2>
+          <h2 className="font-semibold">Subtotal</h2>
         </div>
 
         {/* Product Row */}
@@ -35,13 +42,15 @@ export default function Cart() {
             width={108}
             height={105}
             alt="Asgaard Sofa"
-            className="object-cover"
+            className="object-cover rounded-md"
           />
           <p className="text-center md:text-left flex-1">Asgaard Sofa</p>
           <p className="text-center flex-1">Rs. 250,000.00</p>
           <input
             type="number"
             className="w-16 p-2 border border-gray-300 rounded-md text-center"
+            defaultValue={1} // Set default quantity
+            min={1} // Ensure quantity can't be less than 1
           />
           <p className="text-center flex-1">Rs. 250,000.00</p>
         </div>
@@ -55,7 +64,7 @@ export default function Cart() {
           <p>
             <span className="font-bold">Total:</span> Rs. 250,000.00
           </p>
-          <button className="mt-5 rounded-md border-gray-900 border-2 py-2 px-4 hover:bg-gray-900 hover:text-white transition">
+          <button className="mt-5 rounded-md border-gray-900 border-2 py-2 px-4 hover:bg-gray-900 hover:text-white transition duration-200">
             Check Out
           </button>
         </div>
@@ -63,46 +72,40 @@ export default function Cart() {
 
       {/* Features Section */}
       <div className="mb-10 mt-10 flex flex-wrap justify-evenly items-center gap-6 p-4 w-full bg-[#F9F1E7]">
-        <div className="text-center max-w-[150px]">
-          <Image
-            src="/Group.jpg"
-            width={40}
-            height={40}
-            alt="High Quality"
-          />
-          <h4 className="font-bold mt-2">High Quality</h4>
-          <p className="text-sm">Crafted from top materials</p>
-        </div>
-        <div className="text-center max-w-[150px]">
-          <Image
-            src="/warr.jpg"
-            width={40}
-            height={40}
-            alt="Warranty Protection"
-          />
-          <h4 className="font-bold mt-2">Warranty Protection</h4>
-          <p className="text-sm">Over 2 years</p>
-        </div>
-        <div className="text-center max-w-[150px]">
-          <Image
-            src="/Vector.jpg"
-            width={40}
-            height={40}
-            alt="Free Shipping"
-          />
-          <h4 className="font-bold mt-2">Free Shipping</h4>
-          <p className="text-sm">Order over $150</p>
-        </div>
-        <div className="text-center max-w-[150px]">
-          <Image
-            src="/customer.jpg"
-            width={40}
-            height={40}
-            alt="24/7 Support"
-          />
-          <h4 className="font-bold mt-2">24/7 Support</h4>
-          <p className="text-sm">Dedicated support</p>
-        </div>
+        {[
+          {
+            src: "/Group.jpg",
+            title: "High Quality",
+            description: "Crafted from top materials",
+          },
+          {
+            src: "/warr.jpg",
+            title: "Warranty Protection",
+            description: "Over 2 years",
+          },
+          {
+            src: "/Vector.jpg",
+            title: "Free Shipping",
+            description: "Order over $150",
+          },
+          {
+            src: "/customer.jpg",
+            title: "24/7 Support",
+            description: "Dedicated support",
+          },
+        ].map((feature, index) => (
+          <div key={index} className="text-center max-w-[150px]">
+            <Image
+              src={feature.src}
+              width={40}
+              height={40}
+              alt={feature.title}
+              className="object-contain"
+            />
+            <h4 className="font-bold mt-2">{feature.title}</h4>
+            <p className="text-sm">{feature.description}</p>
+          </div>
+        ))}
       </div>
     </>
   );

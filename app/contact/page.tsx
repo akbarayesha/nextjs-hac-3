@@ -1,14 +1,11 @@
 export default function Contact() {
   return (
     <main>
+      {/* Hero Section */}
       <div className="relative bg-cover bg-center pt-48 pr-14" style={{ backgroundImage: "url('/pic13.jpg')" }}>
-        <img
-          src=""
-          alt=""
-          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-auto h-auto"
-        />
-        <div className="px-4 sm:px-14 py-4 flex justify-center ml-16 pb-16">
-          <nav className="text-gray-600">
+        <div className="absolute inset-0 bg-black bg-opacity-30"></div> {/* Overlay for better text visibility */}
+        <div className="px-4 sm:px-14 py-4 flex justify-center ml-16 pb-16 relative">
+          <nav className="text-gray-200">
             <a href="/" className="hover:text-gray-400 font-sans font-bold text-xl">
               Home
             </a>
@@ -20,6 +17,7 @@ export default function Contact() {
         </div>
       </div>
 
+      {/* Main Content */}
       <div className="max-w-7xl mx-auto py-12 px-6 sm:px-12 lg:px-16">
         <h2 className="text-3xl sm:text-4xl font-bold text-center mb-6">Get In Touch With Us</h2>
         <p className="text-center text-gray-600 mb-8">
