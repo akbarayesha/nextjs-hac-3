@@ -1,7 +1,7 @@
 export default function Contact() {
   return (
-    <main className="max-w-[1440px] mx-auto">
-      <div className="  relative bg-cover bg-center pt-48 pr-14" style={{ backgroundImage: "url('/pic13.jpg')" }}>
+    <main>
+      <div className="relative bg-cover bg-center pt-48 pr-14" style={{ backgroundImage: "url('/pic13.jpg')" }}>
         <img
           src=""
           alt=""
@@ -20,6 +20,7 @@ export default function Contact() {
         </div>
       </div>
 
+      {/* Main Content */}
       <div className="max-w-7xl mx-auto py-12 px-6 sm:px-12 lg:px-16">
         <h2 className="text-3xl sm:text-4xl font-bold text-center mb-6">Get In Touch With Us</h2>
         <p className="text-center text-gray-600 mb-8">
