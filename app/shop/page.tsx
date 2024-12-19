@@ -3,9 +3,9 @@ import SmallStars from "../components/star";
 
 function Productpage() {
     return (
-        <div className="">
+        <div className="max-w-[1440px] mx-auto ">
             {/* 1st Section */}
-            <div className="flex justify-start w-full bg-[#F9F1E7] h-[80px]">
+            <div className=" flex justify-start w-full bg-[#F9F1E7] h-[80px]">
                 <div className="flex justify-start items-center w-[90%] mx-auto bg-[#F9F1E7] gap-5">
                     <div className="text-[#9F9F9F] m-2">Home {">"}</div>
                     <div className="text-[#9F9F9F]">Shop {">"}</div>

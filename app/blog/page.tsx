@@ -6,7 +6,7 @@ const Blog = () => {
   return (
     <div>
       {/* First Section with Tailwind Background */}
-      <section className="relative h-[50vh] bg-cover bg-center bg-[url('/pic13.jpg')]">
+      <section className="max-w-[1440px] mx-auto  relative h-[50vh] bg-cover bg-center bg-[url('/pic13.jpg')]">
         <div className="absolute inset-0 bg-white opacity-30"></div>
         <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-4">
           {/* Small Image in Center */}

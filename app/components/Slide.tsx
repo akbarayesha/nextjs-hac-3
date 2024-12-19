@@ -3,9 +3,9 @@ import { FaCircleArrowRight } from "react-icons/fa6";
 
 export default function HeroSection() {
   return (
-    <div className="slideSection bg-[#FCF8F3] mt-28 px-6 lg:px-32 flex flex-col lg:flex-row items-center gap-10 relative">
+    <div className="max-w-[1440px] mx-auto w-full slideSection bg-[#FCF8F3] mt-28 px-6 lg:px-32 flex flex-col lg:flex-row items-center gap-10 relative">
       {/* Text Section */}
-      <div className="slideText lg:mt-40 lg:ml-20 text-center lg:text-left">
+      <div className="slideText sm:mt-10 md:mt-20 lg:mt-40 lg:ml-20 text-center lg:text-left">
         <h4 className="font-extrabold text-2xl md:text-3xl lg:text-4xl mb-4 leading-tight">
           50+ Beautiful rooms <br /> inspiration
         </h4>

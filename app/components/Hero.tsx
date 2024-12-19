@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <div className="overflow-x-hidden relative">
+    <div className="max-w-[1440px] mx-auto w-full overflow-x-hidden relative">
       {/* Container for the image */}
       <div className="relative w-full">
         {/* Responsive image */}
