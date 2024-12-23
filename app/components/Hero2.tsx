@@ -2,7 +2,7 @@ import React from "react";
 
 const Hero2 = () => {
   return (
-    <div className="w-full h-auto px-4 md:px-8 lg:px-[131px] flex flex-col items-center justify-center mb-[100px] lg:mb-[200px]">
+    <div className="max-w-[1440px] mx-auto w-full h-auto px-4 md:px-8 lg:px-[131px] flex flex-col items-center justify-center mb-[100px] lg:mb-[200px]">
       {/* Title Section */}
       <div className="w-full text-center">
         <h1 className="font-poppins font-[700] text-[24px] md:text-[28px] lg:text-[32px] text-[#333333] leading-tight">

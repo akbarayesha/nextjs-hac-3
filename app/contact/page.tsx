@@ -1,6 +1,6 @@
 export default function Contact() {
   return (
-    <main>
+    <main className="max-w-[1440px] mx-auto w-full">
       <div className="relative bg-cover bg-center pt-48 pr-14" style={{ backgroundImage: "url('/pic13.jpg')" }}>
         <img
           src=""

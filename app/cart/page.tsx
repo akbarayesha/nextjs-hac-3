@@ -71,7 +71,7 @@ export default function Cart() {
       </div>
 
       {/* Features Section */}
-      <div className="mb-10 mt-10 flex flex-wrap justify-evenly items-center gap-6 p-4 w-full bg-[#F9F1E7]">
+      <div className="  mb-10 mt-10 flex flex-wrap justify-evenly items-center gap-6 p-4 w-full bg-[#F9F1E7]">
         {[
           {
             src: "/Group.jpg",
@@ -94,7 +94,7 @@ export default function Cart() {
             description: "Dedicated support",
           },
         ].map((feature, index) => (
-          <div key={index} className="text-center max-w-[150px]">
+          <div key={index} className="sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 text-center max-w-[150px]">
             <Image
               src={feature.src}
               width={40}
