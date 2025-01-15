@@ -7,7 +7,6 @@ import Slide from "./components/Slide";
 export default function Home() {
   return (
     <div>
-      
       <Hero />
       <Hero2 />
       <Products />
